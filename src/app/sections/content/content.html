@@ -1,0 +1,138 @@
+<div class="row">
+  <div class="content-container col-12">
+    <div class="row pt-5 pb-2">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <h1>Intellectual Conversation Group Get Together</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="content-container col-12">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-1">
+        <img src="/images/book.png" alt="Connect" class="img-fluid" />
+      </div>
+      <div class="col-9">
+        <p>
+          As promised, once we hit a 100 members, I would host a member meet-and-greet. We have hit
+          a 100 members! <strong>Jennifer Bishop</strong> is our 100th member! We are humbled that
+          you decided to join. Welcome!<br /><br />
+          In the community where I live, we have a nice pool area that I believe would be perfect
+          for the event. No formal attire, tee shirts, shots or swimwear is perfect. I am suggesting
+          evening times so its not so hot.<br /><br />
+          Deli snacks will be provided along with soda drinks. No alchohol is allowed in the pool
+          area however.<br /><br />
+          I am collecting the information below to understand who is interested and what date and
+          time works the best. Majority rules. I will post the results in both forums once tallied.
+          <br /><br />
+          After submitting the form it will open your email with the results that you entered.
+          Please submit that email and I will receive it.
+          <br /><br />
+        </p>
+        <form class="container" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+          <input
+            style="min-width: 300px"
+            type="text"
+            id="usernamem"
+            name="username"
+            required
+            ngModel
+            #usernameInput="ngModel"
+            placeholder="Please enter your name..."
+            class="form-control"
+          />
+          @if ((usernameInput.touched || userForm.submitted) && usernameInput.invalid) {
+            <div class="error-message">Name is required.</div>
+          }
+          <input
+            style="min-width: 300px"
+            type="email"
+            id="email"
+            name="email"
+            required
+            email
+            ngModel
+            #emailInput="ngModel"
+            placeholder="Please enter your email address..."
+            class="form-control"
+          />
+          @if ((emailInput.touched || userForm.submitted) && emailInput.invalid) {
+            <div class="error-message">Email is required.</div>
+          }
+          @if ((emailInput.touched || userForm.submitted) && emailInput.errors?.['email']) {
+            <div class="error-message">Please enter a valid email address.</div>
+          }
+          <input
+            style="min-width: 300px"
+            type="text"
+            id="phone"
+            name="phone"
+            required
+            ngModel
+            pattern="^[0-9]{10}$"
+            #phoneInput="ngModel"
+            placeholder="Please enter your phone number..."
+            class="form-control"
+          />
+          @if ((phoneInput.touched || userForm.submitted) && phoneInput.invalid) {
+            <div class="error-message">Phone number is required.</div>
+          }
+          @if ((phoneInput.touched || userForm.submitted) && phoneInput?.hasError('pattern')) {
+            <div class="error-message">Please enter a valid 10-digit phone number.</div>
+          }
+          <select
+            data-name="day"
+            id="day"
+            name="day"
+            required
+            ngModel
+            #daySelect="ngModel"
+            style="min-width: 100% !important"
+          >
+            <option selected value="">[ Please select a Day ]</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+          @if ((daySelect.touched || userForm.submitted) && daySelect.invalid) {
+            <div class="error-message">A day is required.</div>
+          }
+          <select
+            data-name="time"
+            id="time"
+            name="time"
+            required
+            ngModel
+            #timeSelect="ngModel"
+            style="min-width: 100% !important"
+          >
+            <option selected value="">[ Please select a Time ]</option>
+            <option value="3to5">3pm to 5pm</option>
+            <option value="4to6">4pm to 6pm</option>
+            <option value="5to7">5pm to 7pm</option>
+            <option value="6to8">6pm to 8pm</option>
+          </select>
+          @if ((timeSelect.touched || userForm.submitted) && timeSelect.invalid) {
+            <div class="error-message">A time is required.</div>
+          }
+          <textarea
+            style="min-width: 300px"
+            type="text"
+            id="comments"
+            name="comments"
+            ngModel
+            #commentsInput="ngModel"
+            rows="2"
+            placeholder="Comments or suggestions?"
+            class="form-control"
+          ></textarea>
+          <br />
+          <button class="mb-5" type="submit">Send</button>
+        </form>
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+  /* site specific */
+.topbanner-container {
+  width: 100%;
+  height: 370px;
+  background-image: url('/images/homepagetop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.topbanner-container h1 {
+  letter-spacing: 2px;
+  font-size: 60px;
+  color: #fff;
+}
+.topbanner-container p {
+  font-family: 'Pristina Regular';  
+  line-height: 54px;
+  font-size: 40px;
+  color: #fff;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .topbanner-container {
+    height: 320px;
+  }
+.topbanner-container h1 {
+  font-size: 40px;
+}
+.topbanner-container p {
+  line-height: 40px;
+  font-size: 32px;
+
+}
+}

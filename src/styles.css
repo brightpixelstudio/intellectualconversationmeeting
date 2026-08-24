@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'CORBEL';
+  src: local('/fonts/CORBEL.TTF'), url('/fonts/CORBEL.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pristina Regular';
+  src: local('/fonts/Pristina Regular.TTF'), url('/fonts/Pristina Regular.TTF') format('truetype');
+}
