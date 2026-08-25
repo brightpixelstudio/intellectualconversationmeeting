@@ -21,10 +21,18 @@ ol {
   margin: 0;
 }
 
+/* Form */
+form {
+  padding: 0px;
+}
+    
 button {
   font-family: 'CORBEL';
+  font-size: 26px;
+  color: white;
   padding: 10px 60px;
-  border: 1px solid #fff;
+  background-color: #020000;
+  border: 1px solid #000000;
   border-radius: 8px;
 }
 
@@ -32,24 +40,33 @@ button:focus {
   outline: 0;
 }
 
-input, select {
+.error-message {
+  font-size: 18px;
+  color: #c70000;
+  margin-bottom: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid #c73800 !important;
+}
+
+input, select, textarea {
   border: 1px solid #6e6e6e !important;
   font-family: 'CORBEL';
   padding: 14px !important;
-  margin-bottom: 8px;
+  margin: 10px 0px 0px 0px !important;  
   font-size: 24px !important;
   color:rgb(148, 148, 148)
 }
 
-textarea {
-  border: 1px solid #6e6e6e !important;
-  font-family: 'CORBEL';
-  padding: 14px !important;
-  font-size: 24px !important;
-}
-
 input::placeholder,
-textarea::placeholder {
-  color: rgb(145, 145, 145) !important;
+textarea::placeholder, 
+select::placeholder {
+  color: rgb(184, 184, 184) !important;
 }
 
+/* End Form */

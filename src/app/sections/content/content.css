@@ -11,22 +11,11 @@
     line-height: 26px;
   }
 
-  .content-container button {
-    font-size: 26px;
-    color: white;
-    background-color: #020000;
-    border: 1px solid #000000;
-  }
 
   .content-container button:hover {
     background-color: rgb(129, 0, 0);
     border: 1px solid rgb(128, 0, 0);
     ;
-  }
-
-  .error-message {
-    color: #c70000;
-    margin-bottom: 10px;
   }
 
   @media screen and (max-width: 768px) {
