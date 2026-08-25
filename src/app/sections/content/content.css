@@ -13,12 +13,13 @@
   .content-container button:hover {
     background-color: rgb(129, 0, 0);
     border: 1px solid rgb(128, 0, 0);
-    ;
   }
+
+  form{
+    margin: 0px;  }
 
   .content-container .container{
     padding-left: 0px;
-
   }
 
   @media screen and (max-width: 768px) {
