@@ -1,4 +1,3 @@
-
   .content-container h1 {
     letter-spacing: -2px;
     font-size: 50px;
@@ -10,7 +9,6 @@
     font-size: 24px;
     line-height: 26px;
   }
-
 
   .content-container button:hover {
     background-color: rgb(129, 0, 0);
