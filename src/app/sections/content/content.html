@@ -84,6 +84,39 @@
             <div class="error-message">Please enter a valid 10-digit phone number.</div>
           }
           <select
+            data-name="guest"
+            id="guest"
+            name="guest"
+            required
+            ngModel
+            #guestSelect="ngModel"
+            style="min-width: 100% !important"
+          >
+            <option selected value="">[ Bringing a Guest? ]</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+          @if ((guestSelect.touched || userForm.submitted) && guestSelect.invalid) {
+            <div class="error-message">Please select whether you are bringing a guest.</div>
+          }
+          <select
+            data-name="children"
+            id="children"
+            name="children"
+            required
+            ngModel
+            #childrenSelect="ngModel"
+            style="min-width: 100% !important"
+          >
+            <option selected value="">[ Bringing any Children? ]</option>
+            <option value="No">0</option>
+            <option value="1 Child">1</option>
+            <option value="2 Children">2</option>
+          </select>
+          @if ((childrenSelect.touched || userForm.submitted) && childrenSelect.invalid) {
+            <div class="error-message">Please select whether you are bringing any children.</div>
+          }
+          <select
             data-name="day"
             id="day"
             name="day"
@@ -109,10 +142,10 @@
             style="min-width: 100% !important"
           >
             <option selected value="">[ Please select a Time ]</option>
-            <option value="3to5">3pm to 5pm</option>
-            <option value="4to6">4pm to 6pm</option>
-            <option value="5to7">5pm to 7pm</option>
-            <option value="6to8">6pm to 8pm</option>
+            <option value="3 to 5">3pm to 5pm</option>
+            <option value="4 to 6">4pm to 6pm</option>
+            <option value="5 to 7">5pm to 7pm</option>
+            <option value="6 to 8">6pm to 8pm</option>
           </select>
           @if ((timeSelect.touched || userForm.submitted) && timeSelect.invalid) {
             <div class="error-message">A time is required.</div>

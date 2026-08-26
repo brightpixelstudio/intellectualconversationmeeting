@@ -15,9 +15,9 @@ export class Content {
     if (form.valid) {
       //console.log('Form Data:', form.value);
 
-      const subject = encodeURIComponent('Sign up For Intelligent Conversation Meeting');
+      const subject = encodeURIComponent('Sign-up For the Intelligent Conversation Meeting');
       const body = encodeURIComponent(
-        `Name: ${form.value.username}\nEmail: ${form.value.email}\nPhone: ${form.value.phone}\nDay: ${form.value.day}\nTime: ${form.value.time}\ncomments: ${form.value.comments}`,
+        `Name: ${form.value.username}\nEmail: ${form.value.email}\nPhone: ${form.value.phone}\nBringing a Guest? ${form.value.guest}\nBringing any children? ${form.value.children}\nDay: ${form.value.day}\nTime: ${form.value.time}\nComments: ${form.value.comments}`,
       );
 
       // Build the finalized mailto string
